@@ -1,0 +1,22 @@
+/* pages/demo3/demo3.wxss */
+
+/* 1 定义less变量 */
+@color:yellow;
+text{
+    /* 2 使用变量 */
+    color: @color;
+}
+
+view{
+    .vie1{
+        text{
+            color: red;
+        }
+    }
+}
+
+/* 导入 reset.less中的样式*/
+@import "../../style/reset";
+view{
+    color: @themeColor;
+}

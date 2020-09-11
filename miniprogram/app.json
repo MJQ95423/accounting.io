@@ -1,0 +1,54 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/home/home",
+    "pages/record/record",
+    "pages/chart/chart",
+    "pages/user/user",
+    "pages/demo/demo",
+    "data/type_data.json",
+    "pages/demo3/demo3",
+    "pages/demo2/demo2",
+    "pages/demo1/demo1"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f39c12",
+    "navigationBarTitleText": "小毛记账",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index-open.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "记账",
+        "iconPath": "images/chart.png",
+        "selectedIconPath": "images/chart-open.png"
+      },
+      {
+        "pagePath": "pages/chart/chart",
+        "text": "报表",
+        "iconPath": "images/record.png",
+        "selectedIconPath": "images/record-open.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-open.png"
+      }
+    ],
+    "selectedColor": "#fab1a0"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,10 @@
+.daoru{
+  background-color: burlywood;
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  width: calc(750rpx * 100 / 375); 
+  height: calc(750rpx * 100 / 375);
+}

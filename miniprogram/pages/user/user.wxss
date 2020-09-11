@@ -1,0 +1,55 @@
+/* pages/user/user.wxss */
+.top{
+  width: 100%;
+  height: 240rpx;
+  background-image: linear-gradient(to right,#FDD856,#F2BE44);
+  padding: 30rpx;
+}
+.auctor{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 auto;
+}
+.userName{
+  padding-top: 20rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.btn{
+  line-height: 180rpx;
+  width: 180rpx !important ;
+  height: 180rpx !important ;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.center{
+  height: 80rpx;
+  display: flex;
+  padding: 10rpx;
+  border: 1px solid #dfe6e9;
+  border-radius: 20rpx;
+  justify-content: space-around;
+  margin: 20rpx 10rpx 10rpx 10rpx;
+  background-color: #faf5e3;
+  font-size: 24rpx;
+}
+.center image{
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+}
+.xiaoxi image{
+  text-align: center;
+}
+.jifen image{
+  margin-left: 18rpx;
+}
+.yaoqing image{
+  margin-left: 18rpx;
+}
+.shezhi image{
+  text-align: center;
+}

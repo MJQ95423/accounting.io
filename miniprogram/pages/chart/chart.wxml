@@ -1,0 +1,68 @@
+<!--pages/chart/chart.wxml-->
+<!--miniprogram/pages/index/index.wxml-->
+<!-- <swiper indicator-dots="true" autoplay="true" circular="true" display-multiple-items="false">
+  <block wx:for="{{banner}}" wx:key="index">
+    <swiper-item>
+      <view class="swiper-item">
+        <view class="t1"></view>
+        <view class="t2"></view>
+        <view class="t3"></view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper> -->
+
+<view class="chart">
+  <!-- 导航 -->
+  <view class="nav">
+    <!-- 年份 -->
+    <view class="year" bindtap="showItem" data-type="isYear">
+      <view class="year-box">{{currentYear}}年<text class="iconfont icon-ai-arrow-down"></text>
+      </view>
+      <!-- 年列表 -->
+      <view class="year-list {{isYear ? 'show' : ''}}" >
+        <view class="year-item" wx:for="{{yearList}}" wx:key="index" bindtap="yearTab" data-year="{{item}}">{{item}}年</view>
+        
+      </view>
+    </view>
+    <!-- 月 -->
+    <view class="month">
+      <!-- 月份列表 -->
+      <view class="month-list">
+        <view class="month-item {{item.isAct ? 'active' : ''}} " wx:for="{{monthList}}" wx:key="index" bindtap="monthTap" data-index="{{index}}" >{{item.num}}月</view>
+        
+      </view>
+    </view>
+    <!-- 日 -->
+    <view class="date" bindtap="showItem" data-type="isDate">
+      <view class="date-box">
+        <view class="line"></view>
+        <view class="text">筛选</view>
+        <view class="iconfont icon-shaixuan"></view>
+      </view>
+      <!-- 日列表 -->
+      <view class="date-list {{isDate ? 'show' : ''}}">
+        <view class="date-item {{item.isAct ? 'active' : ''}} " wx:for="{{dateList}}" wx:key="index" catchtap="dateTap" data-index="{{index}}">{{item.num}}日</view>
+        
+      </view>
+    </view>
+  </view>
+
+  <!-- 标题 -->
+  <view class="title">
+    <view class="title-item" wx:for="{{tabData}}" wx:key="index" bindtap="toggleTap" data-index="{{index}}" >
+      <view class="title-item-content {{item.type}} {{item.isAct ? 'act' : ''}} ">
+        <view class="title-text">{{item.title}}</view>
+        <view class="title-money">￥{{item.money}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 图表 -->
+
+  <view>
+    <canvas class="canvas" canvas-id="pieCanvas"></canvas>
+  </view>
+
+</view>
+

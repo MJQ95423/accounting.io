@@ -1,0 +1,138 @@
+.header{
+    /* background-color: #FEDB5A; */
+    background-image: linear-gradient(to right, #FDD856, #F2BE44);
+    padding: 40rpx 60rpx;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 280rpx;
+    box-sizing: border-box;
+  }
+  .header .top .top-title{
+    color: #A78522;
+    font-size: 28rpx;
+  }
+  .header .top .top-total{
+    color: #312E2B;
+    font-size: 50rpx;
+    font-weight: bold;
+  }
+  .header .bottom{
+    display: flex;
+    margin-top: 20rpx;
+    position: relative;
+    text-align: center;
+  }
+  .header .bottom .item-bottom{
+    width: 50%;
+  }
+  .header .bottom .item-bottom .bottom-title{
+    color: #A78522;
+    font-size: 28rpx;
+  }
+  .header .bottom .item-bottom .bottom-total{
+    color: #312E2B;
+    font-size: 32rpx;
+    font-weight: bold;
+  }
+  /* 分割线 */
+  .line{
+    position: absolute;
+    top: 30rpx;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1px;
+    height: 60%;
+    background: #B88E22
+  
+  }
+  
+  /* 内容 */
+  .content{
+    padding: 0 20rpx 20rpx;
+  }
+  /* 日期 */
+  .date{
+    position: sticky;
+    top: 280rpx;
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx 0;
+    background-color: #fff;
+  }
+  
+  .date-title text{
+    color: #A2A2A2;
+    font-size: 28rpx;
+    margin-right: 20rpx;
+  }
+  .more{
+    display: flex;
+    align-items: center;
+  }
+  .more .picker{
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  /* 更多的三个圆圈 */
+  .circle{
+    width: 8rpx;
+    height: 8rpx;
+    background-color: #A2A2A2;
+    border-radius: 50%;
+    margin: 0 5rpx;
+  }
+  
+  /* 记录列表 */
+  .list-item{
+    display: flex;
+    padding: 20rpx;
+  }
+  /* 图标 */
+  .item-icon{
+    width: 80rpx;
+    height: 80rpx;
+  }
+  .item-icon image{
+    width: 100%;
+    height: 100%;
+  }
+  .item-content{
+    width: calc(100% - 80rpx);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 20rpx 20rpx;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(218, 211, 211,0.5);
+  }
+  .item-msg{
+    overflow: hidden;
+  }
+  .msg-title{
+    font-weight: bold
+  }
+  .msg-text{
+    font-size: 28rpx;
+    color: #A5A5A5;
+    padding-top: 10rpx;
+    /* 以下三个属性是设单行文本超出隐藏且以三个点代替，三个属性缺一不可 */
+    white-space: nowrap; /* 设置文本不换行*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  /* 价格 */
+  .money{
+    font-weight: bold;
+    white-space: nowrap;  /* 设置文本不换行*/
+  }
+  .money.add{
+    color: #E46567;
+  }
+  .money.reduce{
+    color: #2EA07F;
+  }
+  

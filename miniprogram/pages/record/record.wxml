@@ -1,0 +1,78 @@
+<view class="record">
+  <view class="header"></view>
+  <view class="contain">
+    <!-- 选择类型 -->
+    <view class="select">
+      <view class="type">
+        <view class="type_item fl {{item.isActive ? 'active' : ''}}" 
+        wx:for="{{typeData}}" 
+        wx:key="index" 
+        bindtap="toggleTab" 
+        data-index="{{index}}" 
+        data-active="{{item.isActive}}"
+        data-name="typeData">{{item.title}}</view>
+      </view>
+      <view class="swiper">
+        <swiper class="swiper_title" indicator-dots="true" autoplay="true" indicator-active-color="#FEDB5A">
+          <block wx:for="{{bookkeepingData}}">
+            <swiper-item>
+              <view class="swiper_item">
+                <view class="icon {{itemType.isAct ? 'active' : ''}}" wx:for="{{item}}" wx:key="id" wx:for-item="itemType" wx:for-index="id" bindtap="selectType" data-index="{{index}}" data-id="{{id}}" >
+                  <image src="{{itemType.icon_url}}"></image>
+                  <view class="name">{{itemType.title}}</view>
+                </view>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+    <!-- 账户选择 -->
+  <view class="account">
+    <view class="account-title">
+      <text class="iconfont icon-qianbao"></text>
+      账户选择
+    </view>
+    <view class="account-tab">
+      <view class="tab-item {{item.isActive ? 'active' : ''}}" 
+        wx:for="{{accountData}}" 
+        wx:key="index" 
+        bindtap="toggleTab" 
+        data-index="{{index}}" 
+        data-active="{{item.isActive}}"
+        data-name="accountData">{{item.title}}</view>
+    </view>
+  </view>
+
+  <!-- 记账信息 -->
+  <view class="info">
+    <!-- 记账时间 -->
+    <picker bindchange="getInfo" mode="date" start="{{dateRange.start}}" end="{{dateRange.end}}" data-type= "date">
+      <view class="info-box">
+        <view class="info-title">日期</view>
+        <view class="record-date">{{info.date}}</view>
+      </view>
+    </picker>
+    <!-- 金额 -->
+    <view class="info-box">
+      <view class="info-title">金额</view>
+      <view class="info-input">
+        <input type="digit" placeholder="请输入记账金额" value="{{info.money}}" bindchange="getInfo" data-type= "money"></input>
+      </view>
+    </view>
+    <!-- 备注 -->
+    <view class="info-box">
+      <view class="info-title">备注</view>
+      <view class="info-input">
+        <input type="text" placeholder="请输入备注内容" value="{{info.comment}}" bindchange="getInfo" data-type= "comment"></input>
+      </view>
+    </view>
+  </view>
+  <!-- 保存按钮 -->
+  <view class="save-box">
+    <button wx:if="{{!isAuth}}" class="btn" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" ></button>
+    <view class="save" bindtap="addMsgData">保存</view>
+  </view>
+  
+  </view>
+</view>

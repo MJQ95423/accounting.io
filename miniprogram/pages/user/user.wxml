@@ -1,0 +1,16 @@
+<!--pages/user/user.wxml-->
+<view class="user">
+  <view class="top">
+    <view class="auctor">
+    <image wx:if="{{isAuth}}" class="auctor" src="{{userInfo.avatarUrl}}"></image>
+      <button wx:else class="btn" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">获取头像</button>
+    </view>
+    <view class="userName">{{userInfo.nickName}}</view>
+  </view>
+  <view class="center">
+    <view class="xiaoxi"> <image src="../../images/xiaoxi.png"></image> 消息</view>
+    <view class="jifen"> <image src="../../images/jifen.png"></image> 我的积分</view>
+    <view class="yaoqing"> <image src="../../images/yaoqing.png"></image> 邀请好友</view>
+    <view class="shezhi"> <image src="../../images/shezhi.png"></image> 设置</view>
+  </view>
+</view>

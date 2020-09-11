@@ -1,0 +1,69 @@
+ <view class="home">
+  <!-- 头部 -->
+  <view class="header">
+    <!-- 上 -->
+    <view class="top">
+      <view class="top-title">本月结余</view>
+      <view class="top-total">{{surplus.num}}.<text>{{surplus.decimal}}</text></view>
+    
+    </view>
+    <!-- 下 -->
+    <view class="bottom clearfix">
+      <view class="item-bottom fl">
+        <view class="bottom-title">本月收入</view>
+        <view class="bottom-total">{{monthCost.shouru}}</view>
+      </view>
+      <view class="line"></view>
+      <view class="item-bottom fl">
+        <view class="bottom-title">本月支出</view>
+        <view class="bottom-total">{{monthCost.zhichu}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!--内容 -->
+  <view class="content">
+    <!-- 日期 -->
+    <view class="date">
+      <!-- 时间和收入支出 -->
+      <view class="date-title">
+        <text>{{currentDate}}</text>
+        <text wx:if="{{isToday}}">今天</text>
+        <text>收入:{{cost.shouru}}</text>
+        <text>支出:{{cost.zhichu}}</text>
+      </view>
+      <!-- 更多 -->
+      <view class="more">
+        <picker mode="date"  start="{{dateRange.start}}" end="{{dateRange.end}}" data-type= "date" bindchange="selectDate">
+          <view class="picker">
+            <view class="circle"></view>
+            <view class="circle"></view>
+            <view class="circle"></view>
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <!-- 记录列表 -->
+    <view class="list-item" wx:for="{{msgData}}" wx:key="index"> 
+    <!-- 左边图标 -->
+      <view class="item-icon">
+        <image src="{{item.icon}}"></image>
+      </view>
+
+      <!-- 右边内容 -->
+      <view class="item-content">
+        <!-- 描述 -->
+        <view class="item-msg">
+          <view class="msg-title">{{item.title}}</view>
+          <view class="msg-text">{{item.comment}}</view>
+        </view>
+        <!-- 价格 -->
+        <view class="money {{item.cost =='支出' ? 'reduce' : 'add'}}">{{item.cost == '支出' ? '-' : '+'}}￥{{item.money}}</view>
+      </view>
+    
+    </view>
+  
+  </view>
+
+</view>

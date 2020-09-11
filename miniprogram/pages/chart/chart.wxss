@@ -1,0 +1,154 @@
+/* 导航条 */
+.nav{
+  background-color: #FEDB5A;
+  display: flex
+}
+/* 年 */
+.year,
+.date{
+  position: relative;
+  width: 160rpx;
+  height: 88rpx;
+}
+.year-box{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  background-color: #FEDB5A;
+  position: relative; /* 相对定位不会脱离文档流*/
+  z-index: 10;  /* 层级一定要配合定位使用*/
+}
+.year-box .iconfont{
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+/* 年列表 */
+.year-list,
+.date-list{
+  position: absolute;
+  top: -640rpx;
+  background-color: #FEDB5A;
+  width: 100%;
+  max-height: 640rpx;
+  overflow-y: auto;
+  transition: top 1s;
+}
+.year-list{
+  left: 0;
+}
+.year-list .year-item,
+.date-list .date-item{
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 24rpx;
+}
+
+/* 月 */
+.month{
+  width: calc(100% - 320rpx);
+  height: 88rpx;
+  overflow-x: auto;
+}
+/* 月份列表 */
+.month-list{
+  width: 960rpx;
+   height: 100%;
+  display: flex;
+}
+.month-item{
+  width: 80rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 24rpx;
+  height: 100%;
+}
+
+/* 日 */
+.date-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 24rpx;
+  line-height: 88rpx;
+  position: relative;
+  z-index: 10;
+  background-color: #FEDB5A;
+
+}
+.line{
+  width: 1px;
+  height: 40rpx;
+  background: #B88E22;
+  margin: 22rpx 15rpx;
+}
+.text{
+  font-weight: bold;
+}
+.date-box .iconfont{
+  font-size: 24rpx;
+  margin-left: 15rpx;
+}
+
+/* 日列表 */
+.date-list{
+  right: 0;
+}
+.show{
+  top: 88rpx
+}
+
+.canvas{
+  width: 100%;
+  height: 600rpx;
+}
+
+/* 激活类 */
+.active{
+  font-weight: bold;
+}
+
+/* 标题 */
+.title{
+  margin-top: 20rpx;
+  display: flex;
+}
+.title-item{
+  width: 50%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.title-item-content{
+  border: 1px solid transparent;
+  text-align: center;
+  border-radius: 30rpx;
+}
+.title-text{
+  font-weight: bold;
+  padding: 20rpx 0;
+  color: #444;
+}
+.title-money{
+  padding-bottom: 20rpx;
+  font-weight: bold;
+}
+.act.shouru{
+  border-color: #E46567;
+}
+.shouru .title-money{
+  color: #E46567;
+}
+.act.zhichu{
+  border-color: #2EA07F
+}
+.zhichu .title-money{
+  color: #2EA07F;
+}
+/* 画布 */
+.canvas{
+  width: 100%;
+  height: 700rpx;
+}
